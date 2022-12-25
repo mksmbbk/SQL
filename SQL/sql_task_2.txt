@@ -1,0 +1,30 @@
+SQL:
+
+Тренажёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+1) В перечне команд w3schools, изучить команду Create Table, и с ее помощью создать таблицу ‘Persons’, содержащую поля ‘PersonId’ – целочисленного типа, ‘Firstname’ – строкового типа,
+длинной 30 символов, ‘Lastname’ – строкового типа, длинной 35 символов, и City - строкового
+типа, длинной 170 символов. Добавить значения во вновь созданную таблицу при помощи
+INSERT.
+
+ВАЖНО! Необходимо принимать во внимание ТИП данных. В числовые и в строковые поля, должны записываться соответствующие типы значений. Например: числовые поля - не предназначены для хранения текстовых данных.
+
+Решение:
+
+1.1)
+CREATE TABLE Persons 
+(
+PersonId int,
+Firstname varchar (30),
+Lastname varchar (35),
+City varchar (170)
+);
+
+1.2)
+INSERT INTO Persons (PersonId, Firstname, Lastname, City)
+VALUES (1, 'Rachel', 'Green', 'New York'), (2, 'Monica', 'Geller', 'New York') (3, 'Ross', 'Geller', 'New York'), (4, 'Phoebe', 'Buffay', 'New York'), (6, 'Chandler', 'Bing', 'New York'), (5, 'Joey', 'Tribbiani', 'New York');
+
+1.3)
+SELECT PersonId, Firstname, Lastname, City
+FROM  Persons;
+

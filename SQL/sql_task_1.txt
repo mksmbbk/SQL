@@ -1,0 +1,12 @@
+SQL:
+
+Тренажёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+Задача: 
+Написать запрос, который выведет список имен контактных лиц (ContactName) с соответствующими адресами, которые находятся в Мадриде ИЛИ в Лондоне.
+
+Решение:
+
+SELECT ContactName, Address
+FROM Customers
+WHERE City ='London' OR City ='Madrid';
