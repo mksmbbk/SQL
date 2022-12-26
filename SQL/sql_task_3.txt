@@ -1,0 +1,10 @@
+SQL:
+
+Тренажёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+Задание:
+1) Получить разность между максимальным и минимальным значениями цены в таблице Products.
+
+Решение:
+SELECT MAX(Price) AS LargestPrice, MIN(Price) AS SmallestPrice
+FROM Products;
