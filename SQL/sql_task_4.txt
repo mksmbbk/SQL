@@ -1,0 +1,11 @@
+
+Тренажёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+Задание:
+
+Не привязываясь к конкретным значениям, вывести 5 последних строчек из таблицы Customers.
+
+Решение:
+
+SELECT * FROM [Customers] 
+ORDER BY CustomerID DESC LIMIT 5;
