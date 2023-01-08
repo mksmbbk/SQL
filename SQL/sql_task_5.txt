@@ -1,0 +1,16 @@
+SQL:
+
+Тренажёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+Задание:
+Получить числовую разницу между общим кол-вом всех стран (включая повторяющиеся) в колонке “Countries”, таблицы “Customers”, и кол-вом уникальных стран.
+
+Например, если в поле “Countries” перечислены: Austria, Austria, Argentina, Mexico, то общее кол-во значений = 4, в то время, как уникальных, лишь 3, следовательно, 4 – 3 = 1. Результат, должен быть выведен в колоноку “Result”.
+
+Решение:
+
+SELECT ProductName,
+(SELECT AVG(Price)+50 FROM (Products) AS 'Average Price + 50$', Price
+FROM Products
+WHERE Price > (SELECT AVG(Price)+50 FROM (Products),
+ORDER BY Price DESC;
