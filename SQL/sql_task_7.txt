@@ -1,0 +1,13 @@
+SQL:
+Тренежёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+Задание:
+
+Найти имена клиентов (CustomerName), кто размещал более одного заказа за день. Вывести имена (CustomerName), айдишники кастомеров, а также дату и точное кол-во заказов за день.
+
+Решение:
+
+SELECT c.CustomerName, o.CustomerID, o.OrderDate, COUNT(*) 
+FROM Orders o, Customers c 
+WHERE c.CustomerID=o.CustomerID
+GROUP BY o.CustomerID, OrderDate HAVING COUNT(*)>1
