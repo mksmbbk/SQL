@@ -1,4 +1,18 @@
 SQL:
+Тренежёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
 
 Задание:
 
+Разработать один коррелированный подзапрос с использованием, на выбор, оператора SELECT или UPDATE, 
+или DELETE во внешнем запросе.
+
+Решение:
+
+Для каждой записи из таблицы Customers проверяется, существует ли в таблице Orders запись с тем же CustomerID и ShipperID = 3. Возвращаются только те записи из таблицы Customers, для которых хотя бы одна такая запись существует.
+
+SELECT ContactName
+FROM Customers
+WHERE EXISTS
+(SELECT NULL
+FROM Orders
+WHERE Customers.Customer.ID = Orders.CustomerID AND Orders.ShipperID = 3);
