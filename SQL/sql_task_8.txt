@@ -1,0 +1,16 @@
+SQL:
+
+Тренежёр: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+Задание:
+
+Для таблицы ‘Customers’, написать такой JOIN запрос, который выберет имена всех кастомеров, у которых совпадает город, в рамках данной таблицы. Записи упорядочить по городу.  
+
+Решение:
+
+SELECT DISTINCT A.CustomerName, A.City
+FROM Customers A
+JOIN Customers B ON
+A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
